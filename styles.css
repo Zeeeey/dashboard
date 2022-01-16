@@ -1,0 +1,115 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    /* min-height: 100vh; */
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.dangote_purple {
+    margin-top: 15px;
+    margin-left: 22px;
+}
+
+.dangote_white {
+    margin-top: 9px;
+    margin-left: 9px;
+}
+
+.body1 {
+    background: rgb(30,29,94);
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+@media (min-width: 768px) {
+    .h-md-100 {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .body1 {
+        height: 100vh;
+    }
+}
+
+.right_box  {
+    margin-top: 15%;
+}
+
+.btn {
+    border-radius: 30px;
+    color: white;
+    height: 60px;
+    /* width: 50%; */
+    font-size: 20px;
+}
+
+.btn_signin {
+    border: 2px solid white;
+    color: white;
+    width: 30%;
+}
+
+.btn_signin:hover {
+    background-color: white;
+    border: 2px solid  rgb(30,29,94);
+}
+
+.btn_signup {
+    border: 2px solid rgb(30,29,94);
+    background: rgb(30,29,94);
+    color: white;
+    width: 50%;
+}
+
+.btn_signup:hover {
+    background-color: white;
+    color: rgb(30,29,94);
+}
+
+.btn_recover {
+    border: 2px solid rgb(30,29,94);
+    background: rgb(30,29,94);
+    color: white;
+    width: 70%;
+    font-size: 16px;
+}
+
+.form-control {
+    background-color: #e9ecef;
+    height: 40px;
+    font-size: 16px;
+}
+
+.margin_top_250 {
+    margin-top: 20%;
+}
+
+.margin_top_300 {
+    margin-top: 25%;
+}
+
+.small_text {
+    color: rgb(30,29,94);
+}
+
+.top_text {
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(30,29,94);
+}
+
+a, a:focus, a:hover{
+    color: rgb(30,29,94);
+    text-decoration: none !important;
+}
+
+
+.recover_card {
+    margin-top: 10%;
+}

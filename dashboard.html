@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="dangote_purple">
+                <a href=""><img src="images/dangote_purple.png" alt="" width="60px"></a>
+            </div>
+            <ul class="list-group">
+                <a href="#" class=" active"><i class="fas fa-home mr-2"></i>Overview</a>
+                <a href="#" class=""><i class="fas fa-search mr-2"></i>Search</a>
+                <a href="#" class=""><i class="fas fa-folder-open mr-2"></i>Transactions</a>
+                <a href="#" class=""><i class="fas fa-bus mr-2"></i>Registered Vehicles</a>
+                <a href="#" class=""><i class="fas fa-id-card mr-2"></i>Manage Profile</a>
+                <a href="#" class=""><i class="fas fa-info-circle mr-2"></i>Status</a>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!-- <nav class="navbar navbar-expand navbar-light bg-light justify-content-start mb-3"> -->
+            <div class="navbar navbar-expand navbar-light justify-content-start p-1 mb-3">
+                <div class="col-md-12 my-auto d-flex">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button type="button" id="sidebarCollapse" class="btn mr-3">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <div class="input-group">
+                        <span class="input-group-addon mt-2"><i class="fas fa-search fa-sm mr-1"></i></span>
+                        <input id="email" type="text" class="form-control font_12 border-0" name="email"
+                            placeholder="Vehicle Registration Number" contenteditable="true">
+                        <span class="input-group-addon mt-2"><i class="fas fa-power-off"></i></span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center align-items-center p-0 mt-4">
+                <div class="col-xl-4 col-md-4 mb-4">
+                    <div class="card box1 shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h1 mb-0">
+                                        100
+                                    </div>
+                                    <div class="small font-weight-bold mb-1"> Total Vehicles</div>
+                                </div>
+                                <div class="col-auto">
+                                    <img src="images/bus.png" alt="BusImage" width="50px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-4 mb-4">
+                    <div class="card box1 shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h1 mb-0">
+                                        60
+                                    </div>
+                                    <div class="small font-weight-bold">Locked Vehicles</div>
+                                </div>
+                                <div class="col-auto">
+                                    <img src="images/lock.png" alt="LockedImage" width="50px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-md-4 mb-4">
+                    <div class="card box1 shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h1 mb-0">
+                                        40
+                                    </div>
+                                    <div class="small font-weight-bold">Unlocked Vehicles</div>
+                                </div>
+                                <div class="col-auto">
+                                    <img src="images/unlock.png" alt="UnlockedImage" width="50px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row d-flex">
+
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-2 p-2">
+                    <div class="card box_vehicle shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <p class="h4 mb-4">Registered Vehicles</p>
+                                    <table class="table table-responsive table-hover table_vehicle col-md-6">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">S/N</th>
+                                                <th scope="col">Vehicle Model</th>
+                                                <th scope="col">Registration Number</th>
+                                                <th scope="col">Creation Time</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="font_14">
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Truck one</td>
+                                                <td>EJU-344-RF</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                                <td>Locked</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Truck two</td>
+                                                <td>KJU-344-RF</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                                <td>Open</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Truck one</td>
+                                                <td>EJU-344-RF</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                                <td>Locked</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="float-right">
+                                        <a href="" class="view_more">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-6 col-md-6 col-sm-12 mb-2 p-2">
+                    <div class="card box_transactions shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <p class="h4 mb-4">Transactions</p>
+                                    <table class="table table-responsive table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">S/N</th>
+                                                <th scope="col">Registration Number</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Staff ID</th>
+                                                <th scope="col">Logged time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="font_14">
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>EJU-344-RF</td>
+                                                <td><img src="images/red_status.png" alt=""></td>
+                                                <td>123ISO</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>EJU-344-MF</td>
+                                                <td><img src="images/green_status.png" alt=""></td>
+                                                <td>123ISO</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>EJU-344-RF</td>
+                                                <td><img src="images/green_status.png" alt=""></td>
+                                                <td>123ISO</td>
+                                                <td>01-10-2019 12:43pm</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="float-right">
+                                        <a href="" class="view_more">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+
+        <!-- jQuery Custom Scroller CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+</body>
+
+</html>
