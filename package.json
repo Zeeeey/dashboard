@@ -1,12 +1,16 @@
 {
   "name": "dashboard",
+  "homepage": "https://zeeeey.github.io/dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
